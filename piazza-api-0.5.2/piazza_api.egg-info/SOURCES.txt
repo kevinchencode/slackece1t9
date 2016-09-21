@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+piazza_api/__init__.py
+piazza_api/exceptions.py
+piazza_api/network.py
+piazza_api/piazza.py
+piazza_api/rpc.py
+piazza_api.egg-info/PKG-INFO
+piazza_api.egg-info/SOURCES.txt
+piazza_api.egg-info/dependency_links.txt
+piazza_api.egg-info/pbr.json
+piazza_api.egg-info/requires.txt
+piazza_api.egg-info/top_level.txt
