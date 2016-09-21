@@ -1,0 +1,83 @@
+{'tag_good_arr': [],
+ 'config': {},
+ 'created': '2016-04-24T04:16:27Z',
+ 'i_edits': [],
+ 'unique_views': 97,
+ 'is_tag_good': False,
+ 'request_instructor_me': False,
+ 'type': 'question',
+ 's_edits': [],
+ 'bucket_order': 2,
+ 't': 1474483005939,
+ 'id': 'ine2bvrc7zo60p',
+ 'nr': 501,
+ 'no_answer': 0,
+ 'my_favorite': False,
+ 'bookmarked': 3,
+ 'folders': ['hw5'],
+ 'upvote_ids': [],
+ 'change_log': [
+                {
+                     'anon': 'full',
+            		 'data': 'ine2bvrfyk960q',
+              		 'type': 'create',
+                     'when': '2016-04-24T04:16:27Z'
+                },
+                {
+                    'to': 'ine2bvrc7zo60p',
+                    'anon': 'full',
+                    'data': 'inf38db1s112ni',
+                    'type': 's_answer',
+                    'when': '2016-04-24T21:29:29Z'
+                }
+               ],
+'bucket_name': 'Today',
+'num_favorites': 0,
+'children':
+            [{
+                'config': {},
+                'bucket_name': 'Today',
+                'is_tag_endorse': False,
+                'tag_endorse': [],
+                'created': '2016-04-24T21:29:29Z',
+                'history':
+                           [
+                            {
+                                'created': '2016-04-24T21:29:29Z',
+                                'anon': 'full',
+                                'subject': '',
+                                'content': '<p>Summer courses start on May 9.</p>\n<p><a href="http://www.undergrad.engineering.utoronto.ca/Advising_Support/First_Year_Office/T-Program_2016/SummerSession2016.htm">http://www.undergrad.engineering.utoronto.ca/Advising_Support/First_Year_Office/T-Program_2016/SummerSession2016.htm</a> </p>'
+                            }
+                           ],
+                'tag_endorse_arr': [],
+                'type': 's_answer',
+                'bucket_order': 2,
+                'id': 'inf38daqqws2nh',
+                'children': [],
+                'folders': [],
+                'data':
+                        {
+                            'embed_links': []
+                        }
+            }
+           ],
+'history':
+            [{
+                'created': '2016-04-24T04:16:27Z',
+                'anon': 'full',
+                'subject': 'MOOOOOOOOO',
+                'content': 'when does t program start?'
+            }],
+'no_answer_followup': 0,
+'q_edits': [],
+'status': 'active',
+'is_bookmarked': False,
+'request_instructor': 0,
+'default_anonymity': 'no',
+'tag_good': [],
+'data':
+            {
+                'embed_links': []
+            },
+'tags': ['hw5', 'student']
+}
