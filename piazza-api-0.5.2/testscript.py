@@ -23,14 +23,9 @@ from piazza_api import Piazza
 import getpass
 
 p = Piazza()
-"""
-#
-# email = input('Enter your email: ')
-# password = getpass.getpass('Enter your password: ')
-#
-"""
-email = "mike.vu@mail.utoronto.ca"
-password = "i1puvehtoD"[::-1]
+
+email = input('Enter your email: ')
+password = getpass.getpass('Enter your password: ')
 
 p.user_login(email, password)
 
