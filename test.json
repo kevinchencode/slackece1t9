@@ -1,0 +1,5 @@
+POST https://hooks.slack.com/services/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
+Content-type: application/json
+{
+	'text': 'this is a text, hopefully it works'
+}
