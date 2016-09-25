@@ -8,7 +8,6 @@ Raymond - blackboard and IMAP
 Mike - Piazza api  
 Tim - Heroku/server
 
-Tim
 Server (Raspi) TODO:
 1. Install Debian
 
