@@ -20,6 +20,8 @@ def dump_response_to_file (post='', append=False):
 
 
 from piazza_api import Piazza
+import post
+import json
 import getpass
 
 p = Piazza()
@@ -63,15 +65,30 @@ print(i)
 """
 ece241 = p.network(i['nid'])
 #ece241.get_post(1)
-posts = ece241.iter_all_posts(1)
+posts = ece241.iter_all_posts(20) # Post limiting
+
 for post in posts:
-    dump_response_to_file(post, True)
+    print (post['bucket_name'])
+    print (post['history'][0]['subject'])
+    #print (post['history'][0]['content'])
+    #print (post['history'])
+    #print ("\n")
+    #print (json.dumps(post, sort_keys=True, indent = 4, separators=(',',': ')))
     
-## TODO: CREATE A OBJECT/CLASS FOR POST
+## TODO: CREATE AN OBJECT/CLASS FOR POST?
 
 """
 #
 # Structure for post objects:
 # see '/post_response_format.txt'
+#
+"""
+
+"""
+#
+# Check if the bucket name is "Pinned"
+# Skip pinned posts?
+# Here would be a good place to branch the function to filter out pinned posts
+# or not.
 #
 """
