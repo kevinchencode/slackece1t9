@@ -1,0 +1,12 @@
+name: //insert bot name here
+description: //insert bot description
+avatar: //insert link to bot avatar
+
+environment variables:
+	name: slack_outgoing
+	friendly_name: slack_outgoing
+	type: secret
+
+	name: slack_lec_slash
+	friendly_name: slack_lec_slash
+	type: secret
