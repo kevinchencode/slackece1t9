@@ -10,3 +10,7 @@ environment variables:
 	name: slack_lec_slash
 	friendly_name: slack_lec_slash
 	type: secret
+
+	name: google_drive_password
+	friendly_name: google_drive_password
+	type: secret
