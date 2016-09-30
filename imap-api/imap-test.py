@@ -31,8 +31,9 @@ connectionStatus, mailboxes = Account.list()
 if connectionStatus == 'OK':
 	boxList = open('mailboxes.txt', 'w')
 	boxList.write('Mailboxes: \n')
-	boxList.write(str(mailboxes))
-	
+	boxList.close()
+	boxList = open("mailboxes.txt", 'a')
+	json.dump(mailboxes, boxList)	
 
 Account.logout()
 
