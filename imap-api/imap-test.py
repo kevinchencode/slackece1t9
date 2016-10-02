@@ -29,11 +29,30 @@ print connectionStatus, data
 
 connectionStatus, mailboxes = Account.list()
 if connectionStatus == 'OK':
+	
+	##
+	# Create a file called mailboxes.txt and create title
+	##
+
 	boxList = open('mailboxes.txt', 'w')
 	boxList.write('Mailboxes: \n')
 	boxList.close()
-	boxList = open("mailboxes.txt", 'a')
-	json.dump(mailboxes, boxList)	
+
+	##
+	# Now dump all mailbox info into file in json form
+	##
+	
+	boxList = open('mailboxes.txt', 'a')
+	json.dump(mailboxes, boxList)
+	
+
+	##
+	# Append protocol version
+	##
+
+	boxList.write('\n\n' + str(Account.PROTOCOL_VERSION))	
+else:
+	print 'you fucked up m8~\n'
 
 Account.logout()
 

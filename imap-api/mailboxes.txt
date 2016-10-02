@@ -1,2 +1,4 @@
 Mailboxes: 
 ["(\\HasChildren) \"/\" Calendar", "(\\HasNoChildren) \"/\" Calendar/Birthdays", "(\\HasNoChildren) \"/\" \"Calendar/United States holidays\"", "(\\HasNoChildren) \"/\" Clutter", "(\\HasChildren) \"/\" Contacts", "(\\HasChildren) \"/\" \"Conversation History\"", "(\\HasNoChildren \\Trash) \"/\" \"Deleted Items\"", "(\\HasNoChildren \\Drafts) \"/\" Drafts", "(\\Marked \\HasNoChildren) \"/\" INBOX", "(\\HasNoChildren) \"/\" Journal", "(\\HasNoChildren \\Junk) \"/\" \"Junk Email\"", "(\\HasNoChildren) \"/\" Notes", "(\\HasNoChildren) \"/\" Outbox", "(\\HasNoChildren \\Sent) \"/\" \"Sent Items\"", "(\\HasNoChildren) \"/\" Slack-IMAP-Push", "(\\HasNoChildren) \"/\" Tasks"]
+
+IMAP4REV1
