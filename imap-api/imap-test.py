@@ -7,8 +7,6 @@ import json
 import io
 import datetime
 
-EMAIL_ACC = 'rayray.kim@mail.utoronto.ca'
-
 
 def process_mails (M):
     rv, data = M.search(None, "ALL")
@@ -76,64 +74,67 @@ def process_latest (Account):
 		
 	print '\nThose are all of your emails you fucking small tittied hoe\n'
 
+if __init__ == '__main__':
+	Account = imaplib.IMAP4_SSL('outlook.office365.com') 
 
-Account = imaplib.IMAP4_SSL('outlook.office365.com') 
+	try:
+		emailAddress = raw_input('What is your email address?: ') #email_address
+		connectionStatus, data = Account.login(emailAddress, getpass.getpass())
 
-try:
-	emailAddress = raw_input('What is your email address?: ') 
-	connectionStatus, data = Account.login(emailAddress, getpass.getpass())
+		# login() returns two strings
 
-	# login() returns two strings
+	except imaplib.IMAP4.error:
+		print "You fucked up"
+	    #	print data - data is uninitialized if login fails
+		sys.exit(1)
 
-except imaplib.IMAP4.error:
-	print "You fucked up\n"
-    #	print data - data is uninitialized if login fails
-	sys.exit(1)
-
-print connectionStatus, data
-
-##
-# Try getting the names of mailboxes and dumping into a json file
-##
-
-connectionStatus, mailboxes = Account.list()
-if connectionStatus == 'OK':
-	
-	##
-	# Create a file called mailboxes.txt and create title
-	##
-
-	boxList = open('mailboxes.txt', 'w')
-	boxList.write('Mailboxes: \n')
-	boxList.close()
+	print connectionStatus, data
 
 	##
-	# Now dump all mailbox info into file in json form
-	##
-	
-	boxList = open('mailboxes.txt', 'a')
-	json.dump(mailboxes, boxList)
-	
-
-	##
-	# Append protocol version
+	# Try getting the names of mailboxes and dumping into a json file
 	##
 
-	boxList.write('\n\n' + str(Account.PROTOCOL_VERSION))	
+	connectionStatus, mailboxes = Account.list()
+	if connectionStatus == 'OK':
+	#use "with statements" to open files so scope is accurate
+		##
+		# Create a file called mailboxes.txt and create title
+		##
 
-	##
-	# Process shit!!
-	##
-	print "Printing mailbox..."
-	connectionStatus, data = Account.select("INBOX")
-	# process_mails (Account)
-	process_latest(Account)
-	Account.close()
-else:
-	print 'you fucked up m8~\n'
+		boxList = open('mailboxes.txt', 'w')
+		boxList.write('Mailboxes: \n')#don't have this
+		boxList.close()
 
-Account.logout()
+		##
+		# Now dump all mailbox info into file in json form
+		##
 
-print "logging out... return 0\n"
+		boxList = open('mailboxes.txt', 'a')
+		json.dump(mailboxes, boxList)
 
-sys.exit(0)
+
+		##
+		# Append protocol version
+		##
+
+		##do not need anymore
+		boxList.write('\n\n' + str(Account.PROTOCOL_VERSION))	
+
+		##
+		# Process shit!!
+		##
+		
+		#dont need this
+		print "Printing mailbox..."
+		connectionStatus, data = Account.select("INBOX")
+		# process_mails (Account)
+		process_latest(Account)
+		Account.close()
+	else:
+		print 'you fucked up m8~\n'
+
+	Account.logout()
+
+	print "logging out... return 0\n"
+
+	sys.exit(0)
