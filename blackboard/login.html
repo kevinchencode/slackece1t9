@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="_assets/img/U-of-T-favicon.png">
+    <title>weblogin | University of Toronto</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="_assets/css/bootstrap.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>    
+    <!-- Custom styles for this template -->
+    <link href="_assets/css/weblogin.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="_assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+  <!-- // Header // -->
+  <header role="banner">
+    <div class="container">
+          <div class="row">
+              <div class="col-md-12 ">
+                <a class="site-logo-wrapper" href="http://www.utoronto.ca" title="Go to U of T homepage" ><img class="site-logo" src="_assets/img/U-of-T-logo.png" alt="University of Toronto Logo" /></a>
+              </div>
+          </div><!-- .row -->
+          <div class="row">
+              <div class="col-md-12 page-name"><span>weblogin</span></div>
+          </div><!-- .row -->
+      </div><!-- .container -->
+  </header>
+
+  <!-- // Body // -->
+  <div class="container">
+
+      <div class="row">
+          <div class="col-md-4">
+            <!-- WEBLOGIN BOX START -->
+              <div class="login-box-bar clearfix"><span class="utm"></span><span class="sg"></span><span class="utsc"></span><div style="clear: both;"></div></div>  
+              <div class="login-box">
+	   <!-- custom login message -->
+   <div class="login-error">
+   
+
+   <p class="notice">
+The resource you requested requires you to authenticate.
+</p>
+
+   </div>
+   <!-- end of custom login message -->
+      
+   <form id="query" role="form" method="POST" action="https://weblogin.utoronto.ca/"
+          enctype="application/x-www-form-urlencoded" autocomplete="off">
+       <div class="form-group">
+	      <label for="inputID">UTORid / JOINid</label>
+		  <input type="text" name="user" value="" id="inputID" class="form-control">
+
+       </div>
+       <div class="form-group">
+	      <label for="inputPassword">Password</label>
+	      <input type="password" class="form-control" id="inputPassword" name="pass">
+       </div>
+       <button type="submit" class="btn btn-primary btn-lg" name="login">Log in<span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+
+       <!-- The hidden fields -->
+          
+          <input type="hidden" name="one" value="idp.utorauth.utoronto.ca">
+<input type="hidden" name="two" value="CIMF_Shibboleth_Pilot">
+<input type="hidden" name="creds_from_greq" value="1">
+<input type="hidden" name="three" value="1">
+<input type="hidden" name="four" value="a5a">
+<input type="hidden" name="five" value="GET">
+<input type="hidden" name="six" value="idp.utorauth.utoronto.ca">
+<input type="hidden" name="seven" value="L2lkcC9BdXRobi9SZW1vdGVVc2Vy">
+<input type="hidden" name="relay_url" value="https://idp.utorauth.utoronto.ca/PubCookie.reply">
+<input type="hidden" name="eight" value="">
+<input type="hidden" name="fr" value="NFR">
+<input type="hidden" name="hostname" value="idp.utorauth.utoronto.ca">
+<input type="hidden" name="nine" value="1">
+<input type="hidden" name="file" value="">
+<input type="hidden" name="flag" value="0">
+<input type="hidden" name="referer" value="https://portal.utoronto.ca/webapps/login/?action=relogin">
+<input type="hidden" name="post_stuff" value="">
+<input type="hidden" name="sess_re" value="0">
+<input type="hidden" name="pre_sess_tok" value="1530244765">
+<input type="hidden" name="first_kiss" value="1484454620-136606">
+<input type="hidden" name="pinit" value="0">
+<input type="hidden" name="reply" value="1">
+<input type="hidden" name="create_ts" value="1484454620">
+
+       <!-- The GetCred target, if defined -->
+          
+       <!-- End of inserted stuff. -->
+   </form>
+
+   <div style="margin-top: 15px;"><a id="fp-link">Forgotten Password?</a></div>
+
+              </div>
+              <div class="alert alert-danger"><strong>Alert:</strong> Completely exit your web browser when you are finished.</div>
+            <!-- WEBLOGIN BOX END -->
+          </div><!-- .col-md-4 -->
+          <div class="col-md-8">
+              <div class="row">
+			   <a name="tab-content"></a>
+                  <div class="col-md-9 col-sm-12 col-xs-12">
+                      <div class="tab-content weblogin-info">
+                          <div id="t01" class="tab-pane active">
+                          <h2>Steps you can take to protect your account:</h2>
+                          <ul class="login-checklist">
+                              <li>
+                              Before you begin, make sure the weblogin page (URL) starts with:<br />
+                              <span class="blue">https://weblogin.utoronto.ca/...</span>
+                              </li>
+                              <li>
+                                Check your browser for a valid University of Toronto security certificate:<br />
+                              
+                              <div id="ssl-tabs">
+                                  <ul class="nav nav-pills">
+                                  <li><a title="Internet Explorer" href="#ssl-ie" data-toggle="tab"><img alt="" src="_assets/img/ssl-ie.png" /></a></li>
+                                  <li><a title="Firefox" href="#ssl-ff" data-toggle="tab"><img alt="" src="_assets/img/ssl-ff.png" /></a></li>
+                                  <li><a title="Chrome" href="#ssl-chrome" data-toggle="tab"><img alt="" src="_assets/img/ssl-chrome.png" /></a></li>
+                                  <li><a title="Safari" href="#ssl-safari" data-toggle="tab"><img alt="" src="_assets/img/ssl-safari.png" /></a></li>
+                                  <li style="font-size: 13px; margin-top: 16px">&laquo; Select your browser to see how </li>                          
+                                  </ul>
+                                <div class="tab-content">
+                                  <div id="ssl-ie" class="tab-pane">
+                                  <img alt="In Internet Explorer, University of Toronto and a padlock image appear in the address bar" src='_assets/img/ssl-ie.jpg'>
+                                  </div>
+                                  <div id="ssl-ff" class="tab-pane">
+                                  <img alt="In Firefox, University of Toronto and a padlock image appear in the address bar" src='_assets/img/ssl-ff.jpg'>
+                                  </div>
+                                  <div id="ssl-chrome" class="tab-pane">
+                                  <img alt="In Chrome, University of Toronto and a padlock image appear in the address bar" src='_assets/img/ssl-chrome.jpg'>
+                                  </div>
+                                  <div id="ssl-safari" class="tab-pane">
+                                  <img alt="In Safari, University of Toronto and a padlock image appear in the address bar" src='_assets/img/ssl-safari.jpg'>
+                                  </div>
+                                </div><!-- /.tab-content -->
+                              </div><!-- /#ssl-tabs -->                       
+                              
+                              </li>
+                              <li>When using a public computer, <a href="#" id="howToLogOut" data-toggle="tab">close all windows</a> and exit the browser. 
+                              </li>
+                              <li>
+                              Keep your password a secret at all times
+                              <span class="tip">Tip: U of T will <strong class="alert-danger">never</strong> ask for your password or other personal information by e-mail.</span>
+                              </li>
+                          </ul>
+
+                          </div>
+                          <div id="t02" class="tab-pane">
+                              <h2>What is weblogin?</h2>
+                              <p>
+                              The University of Toronto weblogin service (UTORweblogin) provides
+                              a single place for you to identify yourself to web services within
+                              the University.
+                              </p>
+                              <p>
+                              This is commonly called a "single sign-on" (SSO) system.
+                              Once you log in to <em>weblogin.utoronto.ca</em>, you can access
+                              services like <a href="https://portal.utoronto.ca/">the Portal</a>
+                              and <a href="https://webmail.utoronto.ca">webmail</a> as well
+                              as other weblogin-enabled web services.
+                              </p>
+                              <p>
+                              A single point of login simplifies access to protected
+                              services. Users can log in once with a single JOINid/UTORid and password
+                              and have access to many services. Service providers can authenticate
+                              users without having to maintain their own password systems.
+                              </p>
+                          </div><!-- .tab-pane -->
+                          <div id="t03" class="tab-pane">
+                              <h2>Need a UTORid?</h2>
+                              <p>
+                              The UTORid identifies a user to many services on
+                              campus: e.g. <a href="https://mail.utoronto.ca/">UTmail+ email service</a>,
+                              the <a href="https://portal.utoronto.ca/">Portal</a>,
+                              the <a href="http://wireless.utoronto.ca/" target="_blank">campus wireless network (UTORcwn)</a>
+                              and many services offered by departments.
+                              </p>
+                              <p>
+                              A single user identifier and password simplifies access to protected services. Users need remember only one password and service providers are freed from maintaining a password management system. 
+                              </p>
+                              <p>&nbsp;</p>
+
+                              <div class="panel-group" id="accordionNeedID">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionNeedID" href="#collapseNeedID1">Students</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseNeedID1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                      <p>
+                                      Student UTORids are assigned during the process of registration.
+                                      You should visit your local campus
+                                      <a href="http://www.utoronto.ca/tcard/" target="_blank">TCard</a>
+                                      office where you will be given
+                                      your TCard with your UTORid on it, and a letter explaining how to
+                                      activate your UTORid.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionNeedID" href="#collapseNeedID2">Staff and Faculty</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseNeedID2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                      <p>If you are a staff or faculty member of one of the federated colleges you will have to visit the business officer in your college to obtain your UTORid.</p>     
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionNeedID" href="#collapseNeedID3">More Information under UTORauth</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseNeedID3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                      <p>
+                                      UTORids are managed under
+                                      <a href="http://www.utorauth.utoronto.ca/" target="_blank">UTORauth</a>, the University's authentication and
+                                      authorization database. Notably, the UTORauth web site has details on
+                                      <a href="http://www.utorauth.utoronto.ca/?page=get_utorid" target="_blank">getting a UTORid</a>.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+                              </div><!-- .panel-group -->
+                          </div><!-- .tab-pane -->
+                          <div id="t04" class="tab-pane">
+                              <h2>How to Log Out</h2>
+                              <span class="blue"><i><strong>Exit Your Browser</strong></i></span>
+                              <p>
+                              U of T weblogin stores information in your web browser, using a feature called cookies. When you exit your browser, these cookies are cleared and you are logged out of weblogin and the services that use weblogin for authentication. 
+                              </p>
+                              <p>To exit your browser, look for the <strong><i>close</i></strong>, <strong><i>exit</i></strong>, <strong><i>quit</i></strong> or <strong><i>"X" button</i></strong>.</p>
+
+
+                          </div><!-- .tab-pane -->
+  <!-- BEGIN doc-forgotten-password-weblogin.php -->
+  <div id="t-forgotten" class="tab-pane">
+    <h2>Forgotten Password</h2>
+
+	<p>
+	If you believe you know your password, please visit the
+	<a href="https://www.utorid.utoronto.ca/cgi-bin/utorid/verify.pl">UTORid Password Verification Page</a> to try it.
+	We cannot retrieve your password. We store it in an encrypted state that we can verify, but cannot decrypt or read.
+	If you have forgotten your password,
+	a new password must be chosen using a password reset procedure.
+	</p>
+
+    <div class="panel-group" id="accordionForgottenPW">
+          <div class="panel panel-default"> <!-- UTORid Forgotten Password -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordionForgottenPW" href="#collapse_UTORidForgottenPW">UTORid Forgotten Password</a>
+        </h4>
+      </div>
+      <div id="collapse_UTORidForgottenPW" class="panel-collapse collapse">
+        <div class="panel-body">
+		<h4>UTORid Account Recovery Service</h3>
+		<p>
+		If you have registered with the
+		<a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a>, you can use the <a href="https://recover.utorid.utoronto.ca/">UTORid password reset tool</a>.
+		</p>
+		<h4>If you are not registered, ...</h4>
+		<p>
+		If you are not registered with the <a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a>, please visit your campus help desk:
+		</p>
+		<a href="http://help.ic.utoronto.ca/" title="Information Commons" class="btn btn-info" role="button" target="_blank">St. George</a>
+		<a href="http://www.utm.utoronto.ca/iits/" title="UTM Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTM</a>
+		<a href="http://www.utsc.utoronto.ca/iits/" title="UTSC Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTSC</a>
+		</p>
+	Note: U of T staff, faculty, students, and alumni may register for the
+		<a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a> to enable convenient password reset via alternate email or SMS (mobile phone).
+		You will need to know your UTORid password to register for this service.
+		</p>
+        </div>
+      </div>
+    </div> <!-- .panel -- UTORid Forgotten Password -->
+          <div class="panel panel-default"> <!-- JOINid Forgotten Password -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordionForgottenPW" href="#collapse_JOINidForgottenPW">JOINid Forgotten Password</a>
+        </h4>
+      </div>
+      <div id="collapse_JOINidForgottenPW" class="panel-collapse collapse">
+        <div class="panel-body">
+		<p>
+		Applicants to the University of Toronto have a JOINid.<br/>
+		<a href="https://www.utorid.utoronto.ca/reenable">Reset your JOINid Password</a>
+		</p>
+        </div>
+      </div>
+    </div> <!-- .panel -- JOINid Forgotten Password -->
+    </div><!-- .panel-group -->
+  </div><!-- .tab-pane -->
+  <!-- END   doc-forgotten-password-weblogin.php -->
+  <!-- BEGIN doc-login-problems-weblogin.php -->
+  <div id="t-login-problems" class="tab-pane">
+    <h2>Login Problems</h2>
+
+	<p>
+	If you believe you know your password, please visit the
+	<a href="https://www.utorid.utoronto.ca/cgi-bin/utorid/verify.pl">UTORid Password Verification Page</a> to try it.
+	We cannot retrieve your password. We store it in an encrypted state that we can verify, but cannot decrypt or read.
+	If you have forgotten your password,
+	a new password must be chosen using a password reset procedure.
+	</p>
+
+    <div class="panel-group" id="accordionLoginProblems">
+          <div class="panel panel-default"> <!-- UTORid Login Problems -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordionLoginProblems" href="#collapse_UTORidLoginProblems">UTORid Login Problems</a>
+        </h4>
+      </div>
+      <div id="collapse_UTORidLoginProblems" class="panel-collapse collapse">
+        <div class="panel-body">
+		<h4>UTORid Account Recovery Service</h3>
+		<p>
+		If you have registered with the
+		<a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a>, you can use the <a href="https://recover.utorid.utoronto.ca/">UTORid password reset tool</a>.
+		</p>
+		<h4>If you are not registered, ...</h4>
+		<p>
+		If you are not registered with the <a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a>, please visit your campus help desk:
+		</p>
+		<a href="http://help.ic.utoronto.ca/" title="Information Commons" class="btn btn-info" role="button" target="_blank">St. George</a>
+		<a href="http://www.utm.utoronto.ca/iits/" title="UTM Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTM</a>
+		<a href="http://www.utsc.utoronto.ca/iits/" title="UTSC Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTSC</a>
+		</p>
+	Note: U of T staff, faculty, students, and alumni may register for the
+		<a href="https://www.utorid.utoronto.ca/accountrecovery">UTORid Account Recovery Service</a> to enable convenient password reset via alternate email or SMS (mobile phone).
+		You will need to know your UTORid password to register for this service.
+		</p>
+        </div>
+      </div>
+    </div> <!-- .panel -- UTORid Login Problems -->
+          <div class="panel panel-default"> <!-- JOINid Login Problems -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordionLoginProblems" href="#collapse_JOINid_LoginProblems">JOINid Login Problems</a>
+        </h4>
+      </div>
+      <div id="collapse_JOINid_LoginProblems" class="panel-collapse collapse">
+        <div class="panel-body">
+		<p>
+		Applicants to the University of Toronto have a JOINid.
+		If, after attempting to log in with your JOINid, you receive
+		an error message stating "Authentication Failed",
+		try to <a href="https://www.utorid.utoronto.ca/reenable">re-enable your JOINid / reset the password</a> and try again.
+		</p>
+        </div>
+      </div>
+    </div> <!-- .panel -- JOINid Login Problems -->
+    </div><!-- .panel-group -->
+  </div><!-- .tab-pane -->
+  <!-- END   doc-login-problems-weblogin.php -->
+                          <div id="t06" class="tab-pane">
+                          <h2>Finding Help</h2>
+
+
+                              <div class="panel-group" id="accordionHelp">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionHelp" href="#collapseHelp1">On-line UTORid Services</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseHelp1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                          <p>The <a href="https://www.utorid.utoronto.ca" target="_blank">UTORid management pages</a> may help you resolve some problems on your own.</p>
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionHelp" href="#collapseHelp2">Help with your using your JOINid</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseHelp2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                          <p>
+                                          If you have difficulties, please contact your admissions office and provide the exact
+                                          error message displayed:
+                                          </p>
+                                          <ul>
+                                          <li> for graduate programs: School of Graduate Studies at
+                                             <a href="mailto:admissions.sgs@utoronto.ca">admissions.sgs@utoronto.ca</a></li>
+                                          <li> for undergraduate programs: Enrolment Services at
+                                             <a href="mailto:new2uoft.access@utoronto.ca">new2uoft.access@utoronto.ca</a> </li>
+                                          </ul>
+                                          <p>
+                                          You can find more info in our <a href="http://www.utoronto.ca/security/joinid-faq.htm">JOINid Q &amp; A</a>.
+                                          </p>
+
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordionHelp" href="#collapseHelp3">Campus Help Desk</a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseHelp3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+           <p>
+                 Your Campus Help Desk
+           is available to help you with problems related to the
+           many on-line services.
+           </p>
+           <a href="http://help.ic.utoronto.ca/" title="Information Commons" class="btn btn-info" role="button" target="_blank">St. George</a>
+           <a href="http://www.utm.utoronto.ca/iits/" title="UTM Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTM</a>
+           <a href="http://www.utsc.utoronto.ca/iits/" title="UTSC Information and Instructional Technology Services" class="btn btn-info" role="button" target="_blank">UTSC</a>
+                                    </div>
+                                  </div>
+                                </div><!-- .panel -->
+
+                              </div><!-- .panel-group -->
+
+                          </div><!-- .tab-pane -->
+                      </div><!-- .tab-content -->
+                  </div><!-- .col -->
+
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 weblogin-info-sidenav">
+                      <ul class="nav nav-pills nav-stacked" role="menu">
+                          <li class="active"><a data-toggle="tab" href="#t01">Protect Your Account</a></li>
+                          <li><a data-toggle="tab" href="#t02">What is weblogin?</a></li>
+                          <li><a data-toggle="tab" href="#t03">Need a UTORid?</a></li>
+                          <li><a data-toggle="tab" href="#t04" id="linkTest">How to Log Out</a></li>
+                          <li><a data-toggle="tab" href="#t-forgotten" id="ForgottenPassword">Forgotten Password</a></li>
+                          <li><a data-toggle="tab" href="#t-login-problems" id="LoginProblems">Login Problems</a></li>
+                          <li><a data-toggle="tab" href="#t06">Finding Help</a></li>
+                          <li><a href="http://help.ic.utoronto.ca/solution_id_1748.html" title="This link goes to Information Commons Help Desk website">Protect Your Email</a></li>
+                      </ul>
+                  </div><!-- .col -->
+
+
+              </div><!-- .row -->
+          </div><!-- .col-md-8 -->
+      </div><!-- .row -->
+  </div><!-- .container -->
+
+
+  <!-- // Footer // -->
+  <footer role="contentinfo">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <ul class="footer-links">
+                      <li><a href="http://surveys.utoronto.ca/feedback/" title="">Site Feedback</a></li>
+                      <li><a href="http://www.utoronto.ca/accessibility.htm" title="">Accessibility</a></li>
+                      <li>&copy; University of Toronto</li>
+                  </ul>
+              </div><!-- .col -->
+          </div><!-- .row -->
+      </div><!-- .container -->
+  </footer>
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="_assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#howToLogOut').click(function(){
+      $('#linkTest').tab('show');
+    });
+    $('.showLoginProblems').click(function(){
+      $('#LoginProblems').tab('show');  // Show "Login Problems" tab
+
+    });
+
+    $('#fp-link').click(function(){
+      $('[href=#t-forgotten]').tab('show');
+      scrollToAnchor('tab-content');
+    });
+
+    function scrollToAnchor(aid) {
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    }
+
+  });
+  </script>
+
+
+  </body>
+</html>
+
